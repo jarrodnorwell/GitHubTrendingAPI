@@ -1,5 +1,5 @@
 # GitHubTrendingAPI
-GitHubTrendingAPI is the middleman of GitHubTrending, built using Vapor and written entirely in Swift, GitHubTrendingAPI handles all communication between frontends, whether they be an application, script or website and the backend.
+GitHubTrendingAPI is a middleman of GitHubTrending, built using Vapor and written entirely in Swift, GitHubTrendingAPI handles all communication between frontends, whether they be an application, script or website and the backend.
 
 ## Prerequisites
 ### Databases
