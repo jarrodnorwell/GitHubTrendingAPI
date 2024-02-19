@@ -1,7 +1,7 @@
 import Fluent
 import Vapor
 
-final class Developer : Content, Model {
+final class Developer : Content, Equatable, Model {
     static let schema = "developers"
 
     @ID(custom: .id)
@@ -142,5 +142,9 @@ final class Developer : Content, Model {
         let hourInDay = calender.ordinality(of: .hour, in: .day, for: date) ?? 0
 
         self.id = year + dayInYear + hourInDay
+    }
+
+    static func == (lhs: Developer, rhs: Developer) -> Bool {
+        lhs.id == rhs.id
     }
 }

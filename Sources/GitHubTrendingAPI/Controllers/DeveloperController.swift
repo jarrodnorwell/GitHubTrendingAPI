@@ -14,7 +14,7 @@ struct DeveloperController : RouteCollection {
         let dayInYear = calender.ordinality(of: .day, in: .year, for: date) ?? 0
         let hourInDay = calender.ordinality(of: .hour, in: .day, for: date) ?? 0
 
-        guard let developer = try await Developer.find(year + dayInYear + hourInDay, on: req.db) else {
+        guard let developer = try await Developer.find((year + dayInYear + hourInDay), on: req.db) else {
             throw Abort(.notFound)
         }
 

@@ -8,7 +8,7 @@ public func configure(_ app: Application) async throws {
         connectionString: "mongodb://localhost:27017/githubtrendingapi"
     ), as: .mongo)
 
-    app.routes.defaultMaxBodySize = "10000kb"
+    app.routes.defaultMaxBodySize = "6000kb"
 
     try routes(app)
 }
